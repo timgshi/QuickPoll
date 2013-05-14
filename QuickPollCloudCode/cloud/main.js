@@ -15,3 +15,18 @@ Parse.Cloud.define("receiveSMS", function(request, response) {
   	}
   });
 });
+
+Parse.Cloud.beforeSave("Poll", function(request, response) {
+	var poll_id = 0;
+	var query = new Parse.Query(Parse.Object.extend("Poll"));
+	query.count({
+		success: function(count) {
+			poll_id = count;
+			request.object.set("poll_id", poll_id);
+			response.success();
+		},
+		error: function(error) {
+			response.error(error);
+		}
+	});
+});
