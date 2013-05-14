@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "QuickPoll": {
+            "applicationId": "tubjEYqIZvAHuiTPSnA3CxScmIqXiAi1kTiuNPXl", 
+            "masterKey": "k91F0aa19Q3Ex4OsdWjSjKwHnnI7dobvVfTPOcm0"
+        }, 
+        "_default": {
+            "link": "QuickPoll"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.7"
+    }
+}
